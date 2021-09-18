@@ -14,8 +14,7 @@ struct Person {
 }
 
 struct Graph {
-    std::vector<std::shared_ptr<Person>> men_;
-    std::vector<std::shared_ptr<Person>> women_;
+    std::map<Gender, std::vector<std::shared_ptr<Person>>> persons_by_gender_;
 };
 
 std::unique_ptr<Graph> GraphGenerating(int n, int k, ld beta, int alpha);
