@@ -1,0 +1,7 @@
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/build/CMakeFiles/rebuild_cache.dir
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/build/CMakeFiles/edit_cache.dir
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/build/CMakeFiles/fertility_cleaning.dir
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/build/CMakeFiles/get_matching.dir
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/build/CMakeFiles/make_priorities.dir
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/build/CMakeFiles/main.dir
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/build/CMakeFiles/graph_generation.dir

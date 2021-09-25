@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmake_priorities.a  CMakeFiles/make_priorities.dir/make_priorities.cpp.o
+/usr/bin/ranlib libmake_priorities.a

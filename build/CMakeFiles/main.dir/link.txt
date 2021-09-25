@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/main.dir/main.cpp.o  -o main  libgraph_generation.a libmake_priorities.a libget_matching.a libfertility_cleaning.a 

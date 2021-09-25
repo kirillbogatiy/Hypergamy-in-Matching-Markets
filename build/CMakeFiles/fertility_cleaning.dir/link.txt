@@ -1,0 +1,2 @@
+/usr/bin/ar qc libfertility_cleaning.a  CMakeFiles/fertility_cleaning.dir/fertility_cleaning.cpp.o
+/usr/bin/ranlib libfertility_cleaning.a

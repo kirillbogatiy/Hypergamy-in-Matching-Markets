@@ -1,0 +1,2 @@
+/usr/bin/ar qc libget_matching.a  CMakeFiles/get_matching.dir/get_matching.cpp.o
+/usr/bin/ranlib libget_matching.a
