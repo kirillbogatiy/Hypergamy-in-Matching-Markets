@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+bits/stdc++.h
+-
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/make_priorities.cpp
+make_priorities.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/make_priorities.h
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/make_priorities.h
+bits/stdc++.h
+-
+graph_generation.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+

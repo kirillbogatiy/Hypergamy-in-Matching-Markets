@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.cpp
+graph_generation.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+bits/stdc++.h
+-
+

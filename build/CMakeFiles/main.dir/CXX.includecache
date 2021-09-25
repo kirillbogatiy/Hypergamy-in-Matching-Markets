@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/fertility_cleaning.h
+bits/stdc++.h
+-
+graph_generation.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/get_matching.h
+bits/stdc++.h
+-
+graph_generation.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+bits/stdc++.h
+-
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/main.cpp
+bits/stdc++.h
+-
+graph_generation.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+make_priorities.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/make_priorities.h
+get_matching.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/get_matching.h
+fertility_cleaning.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/fertility_cleaning.h
+
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/make_priorities.h
+bits/stdc++.h
+-
+graph_generation.h
+/home/kirillbogatiy/Documents/Hypergamy-in-Matching-Markets/graph_generation.h
+
