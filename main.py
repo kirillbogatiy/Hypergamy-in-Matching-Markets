@@ -22,8 +22,6 @@ def main():
     men = ['m' + str(i) for i in range(manNum - 1, -1, -1)]
     women = ['w' + str(i) for i in range(womanNum - 1, -1, -1)]
     
-    print(match)
-
     isManSingle, isWomanSingle = [], []
 
     for man in men:
@@ -31,26 +29,6 @@ def main():
 
     for woman in women:
         isWomanSingle.append(int(match[woman] == woman))
-    
-    print(isManSingle, isWomanSingle)
-
-
-    # mas = []
-    # sm = 0
-    # const = 5000
-    # for i in range(len(isManSingle)):
-    #     sm += isManSingle[i]
-    #     if i >= const:
-    #         sm -= isManSingle[i - const]
-    #     mas.append(sm / (const))
-
-    # masNp = np.array(mas)
-
-    #isManSingleNp = np.array(isManSingle)
-
-    #isManSingleChunks = np.split(isManSingleNp, 100)
-
-    #isManSingleSumChunks = np.sum(isManSingleChunks, axis = 1)
 
     N = len(isManSingle)
     C = 16
@@ -80,15 +58,6 @@ def main():
     outputFile = open("answer.txt", "w")
 
     print((sumMan - sumWoman) / cntPairs, file=outputFile)
-
-
-    # fig, ax = plt.subplots()
-    # ax.plot(np.arange(20000, len(masNp), 1), masNp[20000:], '.')
-
-    # ax.set(xlabel='rank(0-100)', ylabel='number of single man')
-    
-    # fig.savefig("test.png")
-    # plt.show()
 
 
 main()
