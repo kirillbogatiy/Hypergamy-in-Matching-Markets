@@ -4,28 +4,18 @@
 std::seed_seq seq2{ (uint64_t) std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count(), (uint64_t) __builtin_ia32_rdtsc(), (uint64_t) (uintptr_t) std::make_unique<char>().get() };
 std::mt19937 rng2(seq2);
 
+
 ld logBeauty(int beauty, int max_beauty) {
     return -log(10 - 10 * static_cast<ld>(beauty) / max_beauty);
 }
+
 
 ld logRank(int rank, int max_rank) {
     return -log(10 - 10 * static_cast<ld>(rank) / max_rank);
 }
 
-std::unique_ptr<Graph> MakePriorities(std::unique_ptr<Graph> graph) {
-    // for (auto& man : graph->persons_by_gender_[Gender::Man]) {
-    //     std::vector<int> mas(man->dating_list_.size());
-    //     std::iota(mas.begin(), mas.end(), 0); 
-    //     std::shuffle(mas.begin(), mas.end(), rng2);
-    //     int num = 0;
-    //     man->person_by_priority_.resize(man->dating_list_.size());
-    //     for (auto woman : man->dating_list_) {
-    //         man->priority_by_person_[woman] = mas[num];
-    //         man->person_by_priority_[mas[num]] = woman;
-    //         ++num;
-    //     }
-    // }
 
+std::unique_ptr<Graph> MakePriorities(std::unique_ptr<Graph> graph) {
     for (auto& man : graph->persons_by_gender_[Gender::Man]) {
         std::vector<std::pair<ld, std::shared_ptr<Person>>> priorities;
         for (auto woman : man->dating_list_) {
@@ -38,8 +28,6 @@ std::unique_ptr<Graph> MakePriorities(std::unique_ptr<Graph> graph) {
         }
     }
 
-
-
     for (auto& woman : graph->persons_by_gender_[Gender::Woman]) {
         std::vector<std::pair<ld, std::shared_ptr<Person>>> priorities;
         for (auto man : woman->dating_list_) {
@@ -51,5 +39,6 @@ std::unique_ptr<Graph> MakePriorities(std::unique_ptr<Graph> graph) {
             woman->person_by_priority_.push_back(priorities[i].second);
         }
     }
+
     return graph;
 }

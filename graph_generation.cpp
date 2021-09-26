@@ -1,7 +1,9 @@
 #include "graph_generation.h"
 
+
 std::seed_seq seq{ (uint64_t) std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::high_resolution_clock::now().time_since_epoch()).count(), (uint64_t) __builtin_ia32_rdtsc(), (uint64_t) (uintptr_t) std::make_unique<char>().get() };
 std::mt19937 rng(seq);
+
 
 std::unique_ptr<Graph> NewGraph(int n, int k, ld beta, int alpha, ld woman_fertility_probability) {
     auto graph = std::make_unique<Graph>();
@@ -35,10 +37,6 @@ std::unique_ptr<Graph> NewGraph(int n, int k, ld beta, int alpha, ld woman_ferti
                 graph->persons_by_gender_[Gender::Man][i]->dating_list_.insert(graph->persons_by_gender_[Gender::Woman][(i - j + n) % n]);
                 graph->persons_by_gender_[Gender::Woman][(i - j + n) % n]->dating_list_.insert(graph->persons_by_gender_[Gender::Man][i]);    
             }
-            // if (i + j + 1 < n) {
-            //     graph->persons_by_gender_[Gender::Woman][i]->dating_list_.insert(graph->persons_by_gender_[Gender::Man][(i + j + 1) % n]);
-            //     graph->persons_by_gender_[Gender::Man][(i + j + 1) % n]->dating_list_.insert(graph->persons_by_gender_[Gender::Woman][i]);
-            // }
         }
     }
 
@@ -76,7 +74,7 @@ std::unique_ptr<Graph> NewGraph(int n, int k, ld beta, int alpha, ld woman_ferti
 
     std::vector<int> mans_ranks(n);
     std::iota(mans_ranks.begin(), mans_ranks.end(), 0);
-    std::shuffle(mans_ranks.begin(), mans_ranks.end(), rng);
+    //std::shuffle(mans_ranks.begin(), mans_ranks.end(), rng);
     for (auto& man : graph->persons_by_gender_[Gender::Man]) {
         man->rank_ = mans_ranks.back();
         mans_ranks.pop_back();
@@ -84,7 +82,7 @@ std::unique_ptr<Graph> NewGraph(int n, int k, ld beta, int alpha, ld woman_ferti
 
     std::vector<int> womans_ranks(n);
     std::iota(womans_ranks.begin(), womans_ranks.end(), 0);
-    std::shuffle(womans_ranks.begin(), womans_ranks.end(), rng);
+    //std::shuffle(womans_ranks.begin(), womans_ranks.end(), rng);
     for (auto& woman : graph->persons_by_gender_[Gender::Woman]) {
         woman->rank_ = womans_ranks.back();
         womans_ranks.pop_back();
@@ -109,6 +107,7 @@ std::unique_ptr<Graph> NewGraph(int n, int k, ld beta, int alpha, ld woman_ferti
 
     return graph;
 }
+
 
 void Graph::Print() {
     std::cerr << "Begin to output men\n";
@@ -157,19 +156,6 @@ std::string Person::ToString() const {
         }
         output << " with rank " << person->rank_ << "\n";
     }
-
-    /*
-    output << "Dating List with order\n";
-    for (auto [person, i] : priority_by_person_) {
-        output << "Priority: " << i << "\n";
-        if (person->gender_ == Gender::Man) {
-            output << "Man";
-        } else {
-            output << "Woman";
-        }
-        output << " with rank " << person->rank_ << "\n";
-    }
-    */
 
     return output.str();
 }

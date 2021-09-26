@@ -1,5 +1,6 @@
 #include "fertility_cleaning.h"
 
+
 std::unique_ptr<Graph> FertilityCleaning(std::unique_ptr<Graph> graph) {
     for (auto& woman : graph->persons_by_gender_[Gender::Woman]) {
         if (woman->fertility_) {
